@@ -25,18 +25,30 @@
       </div>
       <div id="howto" class="heading-p">
         <h1>How to use the api?</h1>
-        <pre>fetch("https://.../sigmarule")
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                if (response.statusText == "OK") {
-                    console.log(data);
-                } else {
-        
-                }
-        
-            })</pre>
+        <pre>
+          const URL = "http://localhost:3000/sigmarule"
+const URL2 = "http://localhost:3000/sigmarule/random"
+// Change localhost:3000 to actual domain.
+const getPosts = async () => {
+
+    const response = await fetch(URL);
+    if (!response.ok) {
+        throw new Error("Error in fetching JSON data, Contact subhranshuchoudhury");
+    }
+    const data = await response.json(); // it will wait to resolve.
+    return data;
+
+}
+
+getPosts()
+    .then(mydata => {
+        console.log(mydata);
+    })
+    .catch(error => {
+        alert(error);
+
+    });
+        </pre>
       </div>
 
       <div class="heading-p">

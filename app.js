@@ -54,6 +54,8 @@ app.get("/",(req,res)=>{
     res.render("home");
 });
 
+app.use((req, res, next) => { res.header({"Access-Control-Allow-Origin": "*"}); next(); })
+
 app.route("/sigmarule")
 .get((req,res)=>{
     Rule.find((err,foundRule)=>{
@@ -62,7 +64,6 @@ app.route("/sigmarule")
         }else{
             res.send(foundRule);
         }
-        // let randomNum = Math.floor()
     });
  
 });
