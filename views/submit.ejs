@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>Hi Subhranshu, Submit a Sigma rule.</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /submit route -->
+          <form action="/submit" method="POST">
+            <div class="form-group">
+              <label for="rule">Sigma Rule</label>
+              <input type="text" class="form-control" name="rule">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>
