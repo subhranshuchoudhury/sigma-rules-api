@@ -22,9 +22,20 @@ pre{
 p{
     text-align: center;
 }
-a{
+.apiAnchor{
     text-decoration: none;
     color: green;
     font-size: large;
     font-weight: bold;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#ruleDisplay{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    margin: 0px;
+    color: yellow;
+    background-color: black;
 }

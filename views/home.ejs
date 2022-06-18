@@ -1,6 +1,7 @@
 <%- include('partials/header') %>
 
       <!-- Carousel -->
+      <div id="ruleDisplay">Todays Rule</div>
 
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -25,10 +26,10 @@
       </div>
       <div id="howto" class="heading-p">
         <h1>How to use the api?</h1>
-        <pre>
-          const URL = "http://localhost:3000/sigmarule"
-const URL2 = "http://localhost:3000/sigmarule/random"
-// Change localhost:3000 to actual domain.
+<pre>
+const URL = "http://sigmarule.herokuapp.com/sigmarule";
+const URL2 = "http://sigmarule.herokuapp.com/sigmarule/random";
+
 const getPosts = async () => {
 
     const response = await fetch(URL);
@@ -48,13 +49,14 @@ getPosts()
         alert(error);
 
     });
-        </pre>
+</pre>
       </div>
 
       <div class="heading-p">
         <h1>Endpoints</h1>
-        <a href="sigmarule">Fetch All Sigma Rule</a>
-        <a href="sigmarule/random">Fetch Random Sigma Rule</a>
+        <a class="apiAnchor" href="sigmarule">All Sigma Rules</a>
+        <a class="apiAnchor" href="sigmarule/random">Random Sigma Rule</a>
       </div>
+      <script src="script.js"></script>
       
 <%- include('partials/footer') %>

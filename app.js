@@ -101,9 +101,9 @@ app.get("/sigmarule/random",(req,res)=>{
         if(err){
             res.send(err);
         }else{
-            res.send(foundRule);
+            res.send(`{"rule":"${foundRule[Math.floor(Math.random() * foundRule.length)].rule}"}`);
         }
-    }).limit(1).skip(Math.floor(Math.random() * 30)); // change the limit number acording your data.
+    });
 });
 
 app.get("/register",(req,res)=>{
