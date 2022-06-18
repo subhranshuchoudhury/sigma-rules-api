@@ -20,5 +20,5 @@ getPosts()
     });
 
 function getRule(Rules) {
-    document.getElementById("ruleDisplay").innerHTML = `Today's sigma rule: ${Rules[0].rule}`;
+    document.getElementById("ruleDisplay").innerHTML = `Today's sigma rule: ${Rules.rule}`;
 }
