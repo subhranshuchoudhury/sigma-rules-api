@@ -9,7 +9,8 @@
 ---
 
 ## Fetch all the Sigma Rules:
-```js const URL = "http://sigmarule.herokuapp.com/sigmarule"
+```js 
+const URL = "http://sigmarule.herokuapp.com/sigmarule"
 const getPosts = async () => {
 
     const response = await fetch(URL);
