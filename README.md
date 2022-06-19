@@ -3,6 +3,7 @@
 - This API provides funny sigma rules from memes.
 - Use it for fun, remeber all the rules are from internet.
 - Kindly don't take the rules seriously.
+- <b>NOTE: Use "http" protocol for no error. eg. http://sigmarule.herokuapp.com/sigmarule</b>
 ---
 
 ### [Home Page](http://sigmarule.herokuapp.com "API Home Page")
@@ -10,6 +11,7 @@
 
 ## Fetch all the Sigma Rules:
 ```js 
+//#### NOTE: Use "http" protocol for no error. eg. http://sigmarule.herokuapp.com/sigmarule
 const URL = "http://sigmarule.herokuapp.com/sigmarule"
 const getPosts = async () => {
 
@@ -32,7 +34,7 @@ getPosts()
     });
 
 function getRule(Rules) {
-    console.log(Rules);
+    console.log(Rules); //Rules[index].rule
 } 
 ```
 ---
@@ -40,7 +42,7 @@ function getRule(Rules) {
 ## Fetch random Sigma Rule:
 
 ```js
-
+//#### NOTE: Use "http" protocol for no error. eg. http://sigmarule.herokuapp.com/sigmarule
 const URL = "http://sigmarule.herokuapp.com/sigmarule/random"
 const getPosts = async () => {
 
@@ -63,14 +65,16 @@ getPosts()
     });
 
 function getRule(Rules) {
-    console.log(Rules)
+    console.log(Rules.rule)
 }
 ```
 ---
 ## Endpoints:
 
-- [Random Rules](https://sigmarule.herokuapp.com/sigmarule/random "Random one Sigma Rule")
-- [All Rules](https://sigmarule.herokuapp.com/sigmarule "All Sigma Rules")
+- [Random Rules](http://sigmarule.herokuapp.com/sigmarule/random "Random one Sigma Rule")
+- [All Rules](http://sigmarule.herokuapp.com/sigmarule "All Sigma Rules")
+
+#### NOTE: Use "http" protocol for no error. eg. http://sigmarule.herokuapp.com/sigmarule
 ---
 Author: [Subhranshu Choudhury](https://about.me/subhranshu "aka Chintu")
 
